@@ -1,0 +1,22 @@
+
+.sidemenu{
+    background-color: rgb(236, 236, 236);
+}
+
+.sidemenu > li{
+    font-size: 16px;
+    padding: 20px 0  20px 0;
+}
+
+.normalmenu > li {
+    padding: 0 20px 0 20px !important;
+    
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.158);
+    border-radius: 15px;
+    padding: 30px;
+    color: #d24c22;
+}

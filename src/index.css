@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+@layer utilities {
+    h1 {
+      @apply text-white;
+    }
+    h2 {
+        @apply text-white;
+      }
+    p {
+        @apply text-white;
+      }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Default styles for all screen sizes */
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+
+/* Media query for screens normal pc */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Media query for screens between 769px and 1024px (e.g., tablets) */
+@media (min-width: 767px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* Media query for screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 766px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Add more media queries for other screen sizes as needed */
