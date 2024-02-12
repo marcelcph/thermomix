@@ -6,7 +6,7 @@ import Kryds from "../assets/kryds.svg";
 
 function Nav() {
   const activeLink =
-    "!text-white !underline !bg-black !shadow-transparent !border-transparent !bg-transparent !hover:text-primary !hover:shadow-transparent !hover:border-transparent !hover:bg-transparent !font-medium";
+    "!underline !bg-black !shadow-transparent !border-transparent !bg-transparent !hover:text-primary !hover:shadow-transparent !hover:border-transparent !hover:bg-transparent !font-medium";
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -134,7 +134,7 @@ function Nav() {
               <label htmlFor="my-drawer-3">
                 <img className="w-10" src={Kryds} alt="kryds" />
               </label>
-              <li className="hover:animate-jump">
+              <li className="hover:animate-jump text-black">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
                   to="/"
@@ -146,19 +146,19 @@ function Nav() {
                   FORSIDE
                 </NavLink>
               </li>
-              <li className="hover:animate-jump">
+              <li className="hover:animate-jump text-black">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
-                  to="/leadgen"
+                  to="/artikler"
                   onClick={() => {
                     scrollToTop();
                     closeDrawer();
                   }}
                 >
-                  LEADGEN
+                  ARTIKLER
                 </NavLink>
               </li>
-              <li className="hover:animate-jump">
+              <li className="hover:animate-jump text-black">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
                   to="/om-os"
@@ -170,7 +170,7 @@ function Nav() {
                   OM OS
                 </NavLink>
               </li>
-              <li className="hover:animate-jump">
+              <li className="hover:animate-jump text-black">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
                   to="/kontakt"
