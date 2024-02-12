@@ -47,7 +47,7 @@ function Contact() {
         <div className="container flex flex-col  px-6 py-12 mx-auto ">
           <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
             <div className="text-white lg:w-1/2 lg:mx-6 ">
-              <h1 className=" font-bold text-white">Book en demo</h1>
+              <h1 className=" font-bold text-white">Book en demonstration</h1>
               <p className="max-w-2xl mt-5 text-white">
                 Vi vil gerne vise dig, hvordan en Thermomix kan hjælpe dig med
                 at gøre madlavning til en leg. Udfyld formularen, og vi vil

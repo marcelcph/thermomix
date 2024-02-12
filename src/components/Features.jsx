@@ -151,7 +151,7 @@ function Features() {
             alt="dashboard image"
           />
           <div className="mt-4 md:mt-0">
-            <h2 className="mb-4  tracking-tight font-bold  ">
+            <h2 className="mb-4  tracking-tight font-extrabold  ">
               Kom i gang med at din Thermomix og bliv en mester i køkkenet!
             </h2>
             <p className="mb-6 font-light   ">
@@ -160,7 +160,7 @@ function Features() {
             </p>
             <a
               href="#kontakt"
-              className="btn bg-primary inline-flex items-center   hover:bg-primary border-none font-medium rounded-lg  px-5 py-2.5 text-center"
+              className="btn bg-primary inline-flex items-center   hover:bg-primary border-none font-medium rounded-lg  px-5 py-2.5 text-center text-white"
             >
               Kom i gang
               <svg
