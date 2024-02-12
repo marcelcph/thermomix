@@ -44,8 +44,8 @@ function SingleBlog() {
 
   return (
     <>
-      <div className="p-5 sm:p-32 md:pt-32 bg-white">
-        <div className="">
+      <div className="p-5 sm:p-32 md:pt-32 !bg-white ">
+        <div className=" animate-fade">
           <img
             src={blog.featured_media_url || "placeholder.jpg"} // Use featured_media_url here
             alt={blog.title.rendered}
@@ -53,7 +53,7 @@ function SingleBlog() {
           />
         </div>
 
-        <div className="max-w-3xl mx-auto bg-none">
+        <div className="max-w-3xl mx-auto bg-none animate-fade">
           <div className="mt-3 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <div className="">
               <h1 href="#" className="font-bold text-3xl mb-2 text-primary">
