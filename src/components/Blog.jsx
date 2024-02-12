@@ -48,7 +48,7 @@ function WordPressPosts() {
       {loading ? (
         <Loading />
       ) : (
-        <section className="">
+        <section className="animate-fade-down">
           <div className="container py-10 mx-auto">
             <div className="grid grid-cols-1 gap-4 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3 ">
               {posts.map((post) => (
