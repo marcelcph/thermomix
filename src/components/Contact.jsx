@@ -47,8 +47,8 @@ function Contact() {
         <div className="container flex flex-col  px-6 py-12 mx-auto ">
           <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
             <div className="text-white lg:w-1/2 lg:mx-6 ">
-              <h1 className=" font-bold ">Book en demo</h1>
-              <p className="max-w-2xl mt-5">
+              <h1 className=" font-bold text-white">Book en demo</h1>
+              <p className="max-w-2xl mt-5 text-white">
                 Vi vil gerne vise dig, hvordan en Thermomix kan hjælpe dig med
                 at gøre madlavning til en leg. Udfyld formularen, og vi vil
                 kontakte dig for at aftale en demonstration af maskinen.
@@ -98,10 +98,10 @@ function Contact() {
                     </div>
                     <div>
                       <label className="block mb-2  text-gray-600  mt-6 md:mt-0">
-                        Dato
+                        Ønsket dato & tid
                       </label>
                       <input
-                        type="date"
+                        type="datetime-local"
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
                         className="block w-full px-12 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"

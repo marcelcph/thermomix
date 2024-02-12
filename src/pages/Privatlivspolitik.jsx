@@ -78,11 +78,12 @@ function Privatlivspolitik() {
         <h2 className="text-lg font-semibold mt-4">8. Kontakt os</h2>
         <p>
           Hvis du har spørgsmål om denne privatlivspolitik eller ønsker at udøve
-          dine rettigheder, bedes du kontakte os på følgende måde: <a href="mailto:kontakt@cleverreply.dk" className="underline">kontakt@cleverreply.dk</a>
+          dine rettigheder, bedes du kontakte os på følgende måde:{" "}
+          <a href="mailto:info@thermomixfan.dk" className="underline">
+            info@thermomixfan.dk
+          </a>
         </p>
-        <p className="mt-4">
-          Sidst opdateret: 08-09-2023
-        </p>
+        <p className="mt-4">Sidst opdateret: 12-02-2024</p>
         <p className="mt-2">
           Ved at bruge vores hjemmeside og tjenester accepterer du vilkårene i
           denne privatlivspolitik.

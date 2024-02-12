@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <div className=" mx-auto">
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/leadgen" element={<Artikler />} />
+          <Route path="/artikler" element={<Artikler />} />
           <Route path="/blog/:blogId" element={<SingleBlog />} />
           <Route path="/om-os" element={<Omos />} />
           <Route path="/kontakt" element={<Kontakt />} />

@@ -1,13 +1,12 @@
-import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ScrollNav } from "./InView";
 
-import Logo from "../assets/images/logo/Logo_hvid/Logo_hvid@0.5x.png";
+import Logo from "../assets/images/logo/Logo_hvid/Thermomix_logo_hvid.png";
 import Kryds from "../assets/kryds.svg";
 
 function Nav() {
   const activeLink =
-    "!text-primary !shadow-transparent !border-transparent !bg-transparent !hover:text-primary !hover:shadow-transparent !hover:border-transparent !hover:bg-transparent !font-medium";
+    "!text-white !underline !bg-black !shadow-transparent !border-transparent !bg-transparent !hover:text-primary !hover:shadow-transparent !hover:border-transparent !hover:bg-transparent !font-medium";
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -29,10 +28,10 @@ function Nav() {
           <div className="drawer-content flex flex-col">
             {/* Navbar */}
             <div
-              className={`w-screen md:px-10 navbar justify-between pt-2 pb-2 !fixed z-20 ${
+              className={`w-screen md:px-10 navbar justify-between pt-2 pb-2  !bg-gray-700 !fixed z-20 ${
                 inView
                   ? "animate-flip-up animate-duration-[400ms]"
-                  : "!bg-black animate-flip-down animate-duration-[400ms]"
+                  : "!bg-black opacity-90 animate-flip-down animate-duration-[400ms]"
               }`}
             >
               <div className="px-2 mx-2 hover:animate-jump animate-duration-500">
@@ -80,7 +79,7 @@ function Nav() {
                   <li className="hover:animate-jump">
                     <NavLink
                       className={({ isActive }) => (isActive ? activeLink : "")}
-                      to="/leadgen"
+                      to="/artikler"
                       onClick={scrollToTop}
                     >
                       ARTIKLER
@@ -108,7 +107,7 @@ function Nav() {
               </div>
               <div className="lg:block hidden">
                 <a href="#kontakt">
-                  <button className="btn lg:w-56  bg-primary border-0 text-white hover:bg-orange-600 hover:animate-jump animate-duration-[800ms] animate-ease-out">
+                  <button className="btn lg:w-56  bg-green-700 border-0 text-white hover:bg-white hover:text-primary hover:animate-jump animate-duration-[800ms] animate-ease-out">
                     Kontakt os
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +190,7 @@ function Nav() {
                   closeDrawer();
                 }}
               >
-                <button className="btn w-56 mt-10 bg-primary border-0 text-white hover:bg-orange-600">
+                <button className="btn w-56 mt-10 bg-primary border-0 text-white hover:bg-green-600">
                   Kontakt os
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

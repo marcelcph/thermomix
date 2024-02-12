@@ -27,7 +27,7 @@ function SingleBlog() {
 
   return (
     <>
-      <div className=" p-5 sm:p-32 md:pt-32 ">
+      <div className=" p-5 sm:p-32 md:pt-32 bg-white">
         <div className="">
           <img
             src={blog.jetpack_featured_media_url}

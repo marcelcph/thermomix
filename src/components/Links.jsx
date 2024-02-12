@@ -1,56 +1,76 @@
 import { Link } from "react-router-dom";
+import Thermo1 from "../assets/images/thermomix_img/thermomix_bage.webp";
+import { Animate } from "./InView";
 
 function Links() {
   return (
     <>
-      <div className="container mx-auto text-center">
-        <h1>Links</h1>
-        <p>Her er nogle links til andre sider</p>
+      <Animate />
+      <div
+        data-aos="zoom-in-down"
+        data-aos-offset="250"
+        className="mx-2 lg:mx-auto container"
+      >
+        <div className="container mx-auto text-center">
+          <h1 className="font-extrabold">Læs mere</h1>
+        </div>
+        <section className="container mx-auto text-center pb-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="card">
+            <div className="card-body">
+              <div className="bg-primary rounded-xl">
+                {" "}
+                <img
+                  src={Thermo1}
+                  alt="Thermomix"
+                  className="img-fluid w-full rounded-t-xl"
+                />
+                <a
+                  href="https://www.thermomix.dk/"
+                  className="btn btn-primary btn-block font-extrabold"
+                >
+                  THERMOLINK 1
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-body">
+              <div className="bg-primary rounded-xl">
+                {" "}
+                <img
+                  src={Thermo1}
+                  alt="Thermomix"
+                  className="img-fluid w-full rounded-t-xl"
+                />
+                <a
+                  href="https://www.thermomix.dk/"
+                  className="btn btn-primary btn-block font-extrabold"
+                >
+                  THERMOLINK 1
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-body">
+              <div className="bg-primary rounded-xl">
+                {" "}
+                <img
+                  src={Thermo1}
+                  alt="Thermomix"
+                  className="img-fluid w-full rounded-t-xl"
+                />
+                <a
+                  href="https://www.thermomix.dk/"
+                  className="btn btn-primary btn-block font-extrabold"
+                >
+                  THERMOLINK 1
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <section className="container mx-auto text-center pb-5 grid grid-cols-3 gap-4">
-        <div className="card">
-          <div className="card-body">
-            <div className="bg-primary rounded-xl">
-              <a href="https://www.thermomix.dk/" className="btn btn-primary">
-                Visit Thermomix
-              </a>
-              <img
-                src="thermomix_image_url"
-                alt="Thermomix"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <div className="bg-primary rounded-xl">
-              <a href="https://www.example.com/" className="btn btn-primary">
-                Visit Example
-              </a>
-              <img
-                src="example_image_url"
-                alt="Example"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <div className="bg-primary rounded-xl">
-              <a href="https://www.example2.com/" className="btn btn-primary">
-                Visit Example2
-              </a>
-              <img
-                src="example2_image_url"
-                alt="Example2"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

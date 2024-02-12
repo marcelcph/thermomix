@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="bg-gradient-to-bl from-blue-300 via-blue-700 to-secondary px-5">
+      <div className="bg-gradient-to-tr from-white via-white-700 to-white px-5">
         <Hero />
         <Features />
         <Link />

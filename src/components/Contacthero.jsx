@@ -1,19 +1,19 @@
 import React from "react";
-import Agree from "../assets/agreement.svg";
-
+import thermomix from "../assets/images/thermomix_img/thermomix_bage.webp";
 function Contacthero() {
   return (
     <>
       <section className="animate-fade-left">
-        <div className="gap-8 items-center md:mx-auto container lg:my-[2.8rem] 3xl:my-10 lg:max-w-screen-xl xl:gap-16 md:grid md:grid-cols-1 lg:grid-cols-2 max-w-fit pb-8">
-          <div className=" md:mt-0 md:pr-24 lg:pr-0">
-            <h1 className="mb-4  tracking-tight leading-tight font-extrabold text-white ">
-              Kom i gang med at bruge CleverReply i dag
+        <div className="gap-8 items-center md:mx-auto container pt-32 !mt-0 3xl:my-10 lg:max-w-screen-xl xl:gap-16 md:grid md:grid-cols-1 lg:grid-cols-2 max-w-fit pb-8">
+          <div className=" md:mt-0 md:pr-24 lg:pr-0  ">
+            <h1 className="mb-4  tracking-tight leading-tight font-extrabold  ">
+              Kom i gang med at bruge en Thermomix i dag!
             </h1>
-            <p className="mb-6 font-light text-white  ">
-              Vi er her for at hjælpe dig med at øge din omsætning og få din
-              virksomhed til at vokse. Dette gør vi igennem effektiv
-              leadgenerering og konvertering.
+            <p className="mb-6 font-light   ">
+              Vi er her for at hjælpe dig med at øge din madglæde og få din
+              madlavning til tops! Book en demo og få en gratis konsultation med
+              en af vores konsulenter. Vi forsikrer os at du ikke bliver
+              skuffet!
             </p>
             <a
               href="#kontakt"
@@ -34,7 +34,11 @@ function Contacthero() {
               </svg>
             </a>
           </div>
-          <img className=" w-full  hidden lg:block" src={Agree} alt="Kontakt os billede" />
+          <img
+            className=" w-full  hidden lg:block rounded-xl shadow-2xl animate-fade-right"
+            src={thermomix}
+            alt="Kontakt os billede"
+          />
         </div>
       </section>
     </>

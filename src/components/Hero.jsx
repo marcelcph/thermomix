@@ -13,7 +13,7 @@ function Hero() {
                 Vær din families <span></span>
                 <span className="underline decoration-primary">masterchef</span>
               </h1>
-              <p className="mb-6 font-light text-white  ">
+              <p className="mb-6 font-light   ">
                 Vær en mester i køkkenet med en køkkenmaskine der sætter
                 kvaliteten i fokus. Med{" "}
                 <strong className="font-extrabold">Thermomix</strong> TM6 kan du
@@ -38,7 +38,9 @@ function Hero() {
                 </svg>
               </a>
               <a href="#løsning">
-                <button className="btn btn-outline">Hvad kan den gøre for dig?</button>
+                <button className="btn btn-outline text-black">
+                  Hvad kan den gøre for dig?
+                </button>
               </a>
             </div>
             <img

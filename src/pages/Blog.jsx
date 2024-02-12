@@ -2,7 +2,7 @@ import Blog from "../components/Blog";
 
 function Artikler() {
   return (
-    <div className="bg-gradient-to-bl from-blue-300 via-blue-700 to-secondary pt-14 lg:pt-0 ">
+    <div className="bg-gradient-to-tr from-white via-white-700 to-white px-5">
       <Blog />
     </div>
   );

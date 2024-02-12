@@ -1,29 +1,25 @@
 import React from "react";
-import Team from "../assets/team.svg";
-
+import ThermomixProdukt from "../assets/images/thermomix_img/thermomix_produkt.jpg";
 function Contactjumbotron() {
   return (
     <section className="  ">
       <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto animate-fade-right">
         <div className="sm:w-1/2 p-8 md:p-10">
           <div className="image object-center text-center">
-            <img src={Team} />
+            <img src={ThermomixProdukt} className="rounded-xl" />
           </div>
         </div>
         <div className="sm:w-1/2 p-5 flex flex-col items-start">
           <div className="text">
             <h2 className="my-2 md:my-4 font-bold ">
-              Vi hjælper med at bygge dit
-              <span className="text-primary"> kundenetværk.</span>
+              Mere finesse til din
+              <span className="text-primary"> madlavning.</span>
             </h2>
-            <p className="text-white">
-              Du kan kontakte os ved at udfylde kontaktformularen på vores
-              hjemmeside eller sende os en e-mail på&nbsp;
-              <a className="underline" href="mailto:kontakt@cleverreply.dk">
-                kontakt@CleverReply.dk
-              </a>
-              . Vores team er klar til at besvare dine spørgsmål og hjælpe dig
-              med at komme i gang.
+            <p className="">
+              Vi har en passion for madlavning og hvordan hverdagen kan gøres
+              nemmere med en Thermomix i køkkenet. Dette ønsker vi at dele med
+              dig, så du kan få glæde af alle de fordele, som en maskine som
+              denne kan tilbyde.
             </p>
           </div>
           <div className="mt-0 lg:mt-6  flex flex-col">

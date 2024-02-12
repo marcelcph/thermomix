@@ -15,11 +15,13 @@ function FAQ() {
           <div className="collapse-title  font-medium text-white">
             Hvem er vi, og hvad gør vi?
           </div>
-          <div className="collapse-content">
-            <p>
-              Vi er CleverReply, og vi er specialiseret i effektiv
-              leadgenerering. Vores mission er at øge dit kundenetværk gennem
-              kvalitetsleads.
+          <div className="collapse-content ">
+            <p className="text-black">
+              Vi her hos ThermomixFan er et team af madentusiaster, der er
+              dedikerede til at hjælpe dig med at få mest muligt ud af din
+              Thermomix. Vi tilbyder en bred vifte af tjenester, herunder
+              opskrifter, tips og tricks, kurser og meget mere for at hjælpe dig
+              med at blive en mester i køkkenet.
             </p>
           </div>
         </div>
@@ -28,12 +30,12 @@ function FAQ() {
           <div className="collapse-title  font-medium text-white">
             Hvordan kan jeg komme i kontakt med jer?
           </div>
-          <div className="collapse-content">
-            <p>
+          <div className="collapse-content ">
+            <p className="text-black">
               Du kan kontakte os ved at udfylde kontaktformularen på vores
               hjemmeside, sende os en e-mail på{" "}
-              <a className="underline" href="mailto:kontakt@cleverreply.dk">
-                kontakt@CleverReply.dk
+              <a className="underline" href="mailto:info@thermomixfan.dk">
+                info@thermomixfan.dk
               </a>
               . Vores team er klar til at besvare dine spørgsmål og hjælpe dig
               med at komme i gang.
@@ -43,72 +45,28 @@ function FAQ() {
         <div className="collapse collapse-arrow bg-primary my-3">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title  font-medium text-white">
-            Hvordan fungerer jeres leadgenereringsproces?
+            Hvordan fungerer en demonstration af maskinen?
           </div>
-          <div className="collapse-content">
-            <p>
-              Vores leadgenereringsproces er skræddersyet til dine specifikke
-              behov. Vi bruger en kombination af avancerede teknologier og
-              ekspertise inden for dit leadgenerering for at identificere og
-              kvalificere potentielle kunder. Vi leverer dig derefter de mest
-              lovende leads, så du kan fokusere på at konvertere dem til kunder.
+          <div className="collapse-content ">
+            <p className="text-black">
+              Vi er på forskellige messer og events, hvor vi demonstrerer vores
+              maskine. Du kan også booke en demonstration hos dig selv, hvor vi
+              kommer ud og viser dig, hvordan maskinen fungerer, og hvad den kan
+              gøre for dig.
             </p>
           </div>
         </div>
         <div className="collapse collapse-arrow bg-primary my-3">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title  font-medium text-white">
-            Hvad er jeres priser og betalingsmuligheder?
+            Hvilke resultater kan jeg forvente at opnå med en Thermomix?
           </div>
-          <div className="collapse-content">
-            <p>
-              Vores priser varierer afhængigt af den specifikke tjeneste, du
-              vælger, og omfanget af dit projekt. Kontakt os for at få en
-              skræddersyet prisfastsættelse. Vi tilbyder forskellige
-              betalingsmuligheder for at imødekomme dine behov.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow bg-primary my-3">
-          <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title  font-medium text-white">
-            Er mine data og oplysninger sikre hos jer?
-          </div>
-          <div className="collapse-content">
-            <p>
-              Ja, vi tager datasikkerhed meget alvorligt. Vi følger strenge
-              sikkerhedsprotokoller og bruger avancerede teknologier for at
-              beskytte dine data. Dine oplysninger er fortrolige, og vi deler
-              dem ikke med tredjeparter uden dit samtykke.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow bg-primary my-3">
-          <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title  font-medium text-white">
-            Hvordan kan jeg komme i gang med jeres tjenester?
-          </div>
-          <div className="collapse-content">
-            <p>
-              For at komme i gang skal du kontakte os via vores kontaktformular,
-              e-mail eller telefon. Vores team vil derefter tage kontakt til dig
-              for at diskutere dine behov og oprette en skræddersyet plan for
-              dig.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow bg-primary my-3">
-          <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title  font-medium text-white">
-            Hvilke resultater kan jeg forvente at opnå med jeres tjenester?
-          </div>
-          <div className="collapse-content">
-            <p>
-              Vores mål er at levere resultater, der overstiger dine
-              forventninger. Resultaterne kan variere afhængigt af din branche
-              og målgruppe, men vi arbejder hårdt for at sikre, at du opnår en
-              stærkere tilstedeværelse, flere kvalificerede leads og øget salg
-              og indtjening.
+          <div className="collapse-content ">
+            <p className="text-black">
+              Med en Thermomix kan du forvente at opnå en række fordele,
+              herunder tidsbesparelser, bedre smag og konsistens i dine retter,
+              mindre madspild og meget mere. Maskinen er designet til at hjælpe
+              dig med at lave mad på en nem og effektiv måde.
             </p>
           </div>
         </div>

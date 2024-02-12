@@ -14,7 +14,7 @@ function Features() {
       >
         <div className="md:max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 mb-8">
           <div>
-            <p className="inline-block px-3 py-px mb-4  font-semibold tracking-wider text-white uppercase rounded-full bg-teal-accent-400">
+            <p className="inline-block px-3 py-px mb-4  font-semibold tracking-wider  uppercase rounded-full bg-teal-accent-400">
               Hvad kan en Thermomix gøre for din hverdag?
             </p>
           </div>
@@ -23,7 +23,7 @@ function Features() {
               Simpel, lækker og fantastisk mad
             </span>
           </h2>
-          <p className=" text-white  ">
+          <p className="   ">
             Med en Thermomix i hjemmet, kan du lave alt fra de mest avancerede
             retter til de mest simple. Med vores køkkenmaskine kan du lave mad
             til hele familien, og du kan lave mad til enhver lejlighed. Uanset
@@ -53,10 +53,10 @@ function Features() {
                 </div>
               </div>
               <div>
-                <h3 className="mb-2 font-bold leading-5 text-white">
+                <h3 className="mb-2 font-bold leading-5 text-primary">
                   Lækker mad
                 </h3>
-                <p className=" text-white">
+                <p className=" ">
                   Du kan blive din families masterchef og lave lækker mad til
                   dem og dermed gøre hverdagen lidt mere lækker.
                 </p>
@@ -84,10 +84,10 @@ function Features() {
                 </div>
               </div>
               <div>
-                <h3 className="mb-2 font-bold leading-5 text-white">
+                <h3 className="mb-2 font-bold leading-5 text-primary">
                   Simpel madlavning
                 </h3>
-                <p className=" text-white">
+                <p className=" ">
                   Ved hjælp af et hav af funktioner, kan du lave mad på en
                   simpel og effektiv måde. Opskrifterne er nemme at følge, og
                   simplificerer dermed madlavningen.
@@ -116,10 +116,10 @@ function Features() {
                 </div>
               </div>
               <div>
-                <h3 className="mb-2 font-bold leading-5 text-white">
+                <h3 className="mb-2 font-bold leading-5 text-primary">
                   Et stort univers af opskrifter
                 </h3>
-                <p className=" text-white">
+                <p className=" ">
                   Ved hjælp af vores opskrifts-univers, kan du finde inspiration
                   til enhver lejlighed og enhver smag som er nem at lave med din
                   Thermomix.
@@ -151,16 +151,16 @@ function Features() {
             alt="dashboard image"
           />
           <div className="mt-4 md:mt-0">
-            <h2 className="mb-4  tracking-tight font-bold text-white ">
+            <h2 className="mb-4  tracking-tight font-bold  ">
               Kom i gang med at din Thermomix og bliv en mester i køkkenet!
             </h2>
-            <p className="mb-6 font-light text-white  ">
+            <p className="mb-6 font-light   ">
               Vi er her for at hjælpe dig med at øge din madglæde og få din
               madlavning til tops!
             </p>
             <a
               href="#kontakt"
-              className="btn bg-primary inline-flex items-center text-white  hover:bg-primary border-none font-medium rounded-lg  px-5 py-2.5 text-center"
+              className="btn bg-primary inline-flex items-center   hover:bg-primary border-none font-medium rounded-lg  px-5 py-2.5 text-center"
             >
               Kom i gang
               <svg
