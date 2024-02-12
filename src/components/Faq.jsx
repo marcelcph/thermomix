@@ -1,14 +1,8 @@
 import React from "react";
-import { Animate } from "./InView";
 function FAQ() {
   return (
     <>
-      <Animate />
-      <div
-        className="container px-2 md:px-24 mx-auto py-8 "
-        data-aos="zoom-in-down"
-        data-aos-offset="200"
-      >
+      <div className="container px-2 md:px-24 mx-auto py-8 ">
         <h2 className=" font-bold py-3 text-center">F.A.Q</h2>
         <div className="collapse collapse-arrow bg-primary ">
           <input type="radio" name="my-accordion-2" />

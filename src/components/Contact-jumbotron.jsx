@@ -1,4 +1,3 @@
-import React from "react";
 import ThermomixProdukt from "../assets/images/thermomix_img/thermomix_produkt.jpg";
 function Contactjumbotron() {
   return (

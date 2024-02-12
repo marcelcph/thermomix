@@ -88,7 +88,7 @@ function Nav() {
                   <li className="hover:animate-jump">
                     <NavLink
                       className={({ isActive }) => (isActive ? activeLink : "")}
-                      to="/kontakt"
+                      to="/konsulent"
                       onClick={scrollToTop}
                     >
                       BLIV KONSULENT
@@ -171,7 +171,7 @@ function Nav() {
               <li className="hover:animate-jump text-black">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
-                  to="/kontakt"
+                  to="/konsulent"
                   onClick={() => {
                     scrollToTop();
                     closeDrawer();
