@@ -1,9 +1,7 @@
-import React from "react";
-
 function Privatlivspolitik() {
   return (
-    <>
-      <div className="max-w-4xl mx-auto p-4 px-12 mt-24">
+    <div className="bg-white">
+      <div className="max-w-4xl mx-auto p-4 px-12 pt-24 bg-white">
         <h1 className="text-2xl font-bold mb-4">Privatlivspolitik</h1>
         <p>
           Din fortrolighed er vigtig for os. Denne privatlivspolitik forklarer,
@@ -89,7 +87,7 @@ function Privatlivspolitik() {
           denne privatlivspolitik.
         </p>
       </div>
-    </>
+    </div>
   );
 }
 
