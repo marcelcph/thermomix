@@ -7,6 +7,8 @@ import axios from "axios";
 function SingleBlog() {
   const { blogId } = useParams();
   const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [mediaLoading, setMediaLoading] = useState(true); // Add media loading state
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -26,15 +28,18 @@ function SingleBlog() {
             featured_media_url: mediaResponse.data.source_url,
           }));
         }
+        setMediaLoading(false); // Set media loading to false after featured media is fetched
       } catch (error) {
-        console.error("error fecthing blog details", error);
+        console.error("error fetching blog details", error);
+      } finally {
+        setLoading(false); // Set loading to false after all data is fetched
       }
     };
     fetchBlog();
   }, [blogId]);
 
-  if (!blog) {
-    return <div>Loading....</div>;
+  if (loading || mediaLoading) {
+    return <Loading />; // Render loading component while data is being fetched
   }
 
   return (

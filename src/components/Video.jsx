@@ -5,7 +5,7 @@ function Video() {
     <>
       <section className="container mx-auto text-center pb-5 ">
         <div className="relative ">
-          <video className=" rounded-lg " controls autoPlay muted>
+          <video className=" rounded-lg w-full" controls autoPlay muted>
             <source src={Video_promo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

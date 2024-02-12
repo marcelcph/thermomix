@@ -56,9 +56,9 @@ function WordPressPosts() {
       ) : (
         <section className="animate-fade">
           <div className="container py-10 mx-auto">
-            <div className="grid grid-cols-1 gap-4 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3 ">
+            <div className="grid grid-cols-1 gap-12 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3 ">
               {posts.map((post) => (
-                <div key={post.id} className="bg-primary rounded-xl p-5">
+                <div key={post.id} className=" bg-primary  rounded-xl p-5">
                   <div className="relative ">
                     <img
                       className="object-cover object-center w-full h-64 rounded-lg lg:h-80"

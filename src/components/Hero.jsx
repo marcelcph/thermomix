@@ -21,7 +21,7 @@ function Hero() {
               </p>
               <a
                 href="#kontakt"
-                className="btn bg-primary inline-flex items-center text-white  hover:bg-primary border-none font-medium rounded-lg  px-5 py-2.5 text-center mr-5"
+                className="btn bg-primary inline-flex items-center text-white  hover:bg-primary border-none font-medium rounded-lg  px-5 py-2.5 text-center mr-5 my-2 lg:my-0"
               >
                 Book en demo
                 <svg
