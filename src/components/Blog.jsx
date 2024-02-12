@@ -19,13 +19,19 @@ function WordPressPosts() {
 
       if (response.data.length > 0) {
         const formattedPosts = response.data.map(async (post) => {
-          const mediaResponse = await axios.get(
-            post._links["wp:featuredmedia"][0].href
-          );
+          // Check if _links["wp:featuredmedia"] exists before accessing its elements
+          const featuredMedia = post._links["wp:featuredmedia"];
+          let mediaUrl = ""; // Default value if featuredMedia doesn't exist
+
+          if (featuredMedia && featuredMedia.length > 0) {
+            const mediaResponse = await axios.get(featuredMedia[0].href);
+            mediaUrl = mediaResponse.data.source_url;
+          }
+
           return {
             ...post,
             formattedDate: formatDate(post.date),
-            mediaUrl: mediaResponse.data.source_url, // assuming source_url contains the image URL
+            mediaUrl: mediaUrl,
           };
         });
 
