@@ -18,11 +18,19 @@ function WordPressPosts() {
       const response = await axios.get(BlogUrl.WORDPRESS_BLOG_URL);
 
       if (response.data.length > 0) {
-        const formattedPosts = response.data.map((post) => ({
-          ...post,
-          formattedDate: formatDate(post.date),
-        }));
-        setPosts(formattedPosts);
+        const formattedPosts = response.data.map(async (post) => {
+          const mediaResponse = await axios.get(
+            post._links["wp:featuredmedia"][0].href
+          );
+          return {
+            ...post,
+            formattedDate: formatDate(post.date),
+            mediaUrl: mediaResponse.data.source_url, // assuming source_url contains the image URL
+          };
+        });
+
+        const resolvedPosts = await Promise.all(formattedPosts);
+        setPosts(resolvedPosts);
         setLoading(false);
       }
     } catch (error) {
@@ -48,7 +56,7 @@ function WordPressPosts() {
                   <div className="relative ">
                     <img
                       className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                      src={post.jetpack_featured_media_url}
+                      src={post.mediaUrl} // Use mediaUrl here
                       alt={post.title.rendered}
                     />
                   </div>
