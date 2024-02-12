@@ -82,7 +82,16 @@ function Nav() {
                       to="/artikler"
                       onClick={scrollToTop}
                     >
-                      ARTIKLER
+                      INSPIRATION
+                    </NavLink>
+                  </li>
+                  <li className="hover:animate-jump">
+                    <NavLink
+                      className={({ isActive }) => (isActive ? activeLink : "")}
+                      to="/kontakt"
+                      onClick={scrollToTop}
+                    >
+                      BLIV KONSULENT
                     </NavLink>
                   </li>
                   <li className="hover:animate-jump">
@@ -94,6 +103,7 @@ function Nav() {
                       OM OS
                     </NavLink>
                   </li>
+
                   <li className="hover:animate-jump">
                     <NavLink
                       className={({ isActive }) => (isActive ? activeLink : "")}
@@ -155,7 +165,19 @@ function Nav() {
                     closeDrawer();
                   }}
                 >
-                  ARTIKLER
+                  INSPIRATION
+                </NavLink>
+              </li>
+              <li className="hover:animate-jump text-black">
+                <NavLink
+                  className={({ isActive }) => (isActive ? activeLink : "")}
+                  to="/kontakt"
+                  onClick={() => {
+                    scrollToTop();
+                    closeDrawer();
+                  }}
+                >
+                  BLIV KONSULENT
                 </NavLink>
               </li>
               <li className="hover:animate-jump text-black">
@@ -182,6 +204,7 @@ function Nav() {
                   KONTAKT
                 </NavLink>
               </li>
+
               <NavLink
                 className={({ isActive }) => (isActive ? activeLink : "")}
                 to="/kontakt"
