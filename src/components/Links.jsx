@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
-import Thermo1 from "../assets/images/thermomix_img/thermomix_bage.webp";
+import inspiration from "../assets/images/links_img/madbillede.jpg";
+import HeinrichThermo from "../assets/images/links_img/tm_billede_hm.jpg";
+import konsulent from "../assets/images/links_img/bliv_konsulent.png";
 import { Animate } from "./InView";
 
 function Links() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <>
       <div className="container mx-auto text-center">
@@ -12,54 +19,54 @@ function Links() {
         <div className="card">
           <div className="card-body">
             <div className="bg-primary rounded-xl">
-              {" "}
               <img
-                src={Thermo1}
-                alt="Thermomix"
-                className="img-fluid w-full rounded-t-xl"
+                src={inspiration}
+                alt="Inspiration til din ThermoMix"
+                className="object-cover object-center w-full h-96 rounded-t-xl"
               />
-              <a
-                href="https://www.thermomix.dk/"
-                className="btn btn-primary btn-block font-extrabold"
+              <Link
+                to="/artikler"
+                className="btn btn-primary btn-block font-extrabold text-white"
+                onClick={scrollToTop}
               >
-                THERMOLINK 1
-              </a>
+                INSPIRATION
+              </Link>
             </div>
           </div>
         </div>
         <div className="card">
           <div className="card-body">
             <div className="bg-primary rounded-xl">
-              {" "}
               <img
-                src={Thermo1}
-                alt="Thermomix"
-                className="img-fluid w-full rounded-t-xl"
+                src={konsulent}
+                alt="Bliv Konsulent"
+                className="object-cover object-center w-full h-96 rounded-t-xl"
               />
-              <a
-                href="https://www.thermomix.dk/"
-                className="btn btn-primary btn-block font-extrabold"
+              <Link
+                to="/konsulent"
+                className="btn btn-primary btn-block font-extrabold text-white"
+                onClick={scrollToTop}
               >
-                THERMOLINK 1
-              </a>
+                BLIV KONSULENT
+              </Link>
             </div>
           </div>
         </div>
         <div className="card">
           <div className="card-body">
             <div className="bg-primary rounded-xl">
-              {" "}
               <img
-                src={Thermo1}
+                src={HeinrichThermo}
                 alt="Thermomix"
-                className="img-fluid w-full rounded-t-xl"
+                className="object-cover object-center w-full h-96 rounded-t-xl"
               />
-              <a
-                href="https://www.thermomix.dk/"
-                className="btn btn-primary btn-block font-extrabold"
+              <Link
+                to="/om-os"
+                className="btn btn-primary btn-block font-extrabold text-white"
+                onClick={scrollToTop}
               >
-                THERMOLINK 1
-              </a>
+                OM THERMOMIXFAN
+              </Link>
             </div>
           </div>
         </div>

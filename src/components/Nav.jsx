@@ -100,17 +100,16 @@ function Nav() {
                       to="/om-os"
                       onClick={scrollToTop}
                     >
-                      OM OS
+                      OM OS & FAQ
                     </NavLink>
                   </li>
-
                   <li className="hover:animate-jump">
                     <NavLink
                       className={({ isActive }) => (isActive ? activeLink : "")}
-                      to="/kontakt"
+                      to="/events"
                       onClick={scrollToTop}
                     >
-                      KONTAKT
+                      EVENTS
                     </NavLink>
                   </li>
                 </ul>
@@ -183,25 +182,25 @@ function Nav() {
               <li className="hover:animate-jump text-black">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
+                  to="/events"
+                  onClick={() => {
+                    scrollToTop();
+                    closeDrawer();
+                  }}
+                >
+                  EVENTS
+                </NavLink>
+              </li>
+              <li className="hover:animate-jump text-black">
+                <NavLink
+                  className={({ isActive }) => (isActive ? activeLink : "")}
                   to="/om-os"
                   onClick={() => {
                     scrollToTop();
                     closeDrawer();
                   }}
                 >
-                  OM OS
-                </NavLink>
-              </li>
-              <li className="hover:animate-jump text-black">
-                <NavLink
-                  className={({ isActive }) => (isActive ? activeLink : "")}
-                  to="/kontakt"
-                  onClick={() => {
-                    scrollToTop();
-                    closeDrawer();
-                  }}
-                >
-                  KONTAKT
+                  OM OS & FAQ
                 </NavLink>
               </li>
 

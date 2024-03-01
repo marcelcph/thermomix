@@ -2,37 +2,25 @@ import React from "react";
 function FAQ() {
   return (
     <>
-      <div className="container px-2 md:px-24 mx-auto py-8 ">
+      <div className="container px-2 md:px-40 mx-auto py-8 ">
         <h2 className=" font-bold py-3 text-center">F.A.Q</h2>
         <div className="collapse collapse-arrow bg-primary ">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title  font-medium text-white">
-            Hvem er vi, og hvad gør vi?
+            Hvordan fungerer en demonstration af Thermomix (Ikke maskinen)
           </div>
           <div className="collapse-content ">
             <p className="text-black">
-              Vi her hos ThermomixFan er et team af madentusiaster, der er
-              dedikerede til at hjælpe dig med at få mest muligt ud af din
-              Thermomix. Vi tilbyder en bred vifte af tjenester, herunder
-              opskrifter, tips og tricks, kurser og meget mere for at hjælpe dig
-              med at blive en mester i køkkenet.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow bg-primary my-3">
-          <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title  font-medium text-white">
-            Hvordan kan jeg komme i kontakt med jer?
-          </div>
-          <div className="collapse-content ">
-            <p className="text-black">
-              Du kan kontakte os ved at udfylde kontaktformularen på vores
-              hjemmeside, sende os en e-mail på{" "}
-              <a className="underline" href="mailto:info@thermomixfan.dk">
-                info@thermomixfan.dk
-              </a>
-              . Vores team er klar til at besvare dine spørgsmål og hjælpe dig
-              med at komme i gang.
+              Når du kontakter os for at få en demonstration af Thermomix,
+              finder vi en tid, der passer dig. Demonstration koster ikke noget,
+              og er helt og aldeles uforpligtende. <br></br> <br></br>Når vi
+              laver en aftale, vil jeg vi spørge dig lidt om, hvad du og din
+              familie kan lide at spise. Ud fra dine ønsker, vil jeg sende en
+              indkøbsliste til dig. Når vi mødes, vil vi så sammen lave den/de
+              retter, som du ønsker. Vi har en demonstrationsmaskine med. Hvis
+              du samler flere personer til demonstrationen, sørger vi for at
+              tilpasse antallet af konsulenter, så alle kan få en god
+              vejledning.
             </p>
           </div>
         </div>
@@ -53,14 +41,18 @@ function FAQ() {
         <div className="collapse collapse-arrow bg-primary my-3">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title  font-medium text-white">
-            Hvilke resultater kan jeg forvente at opnå med en Thermomix?
+            Hvilke resultater kan jeg forvente….
           </div>
           <div className="collapse-content ">
             <p className="text-black">
-              Med en Thermomix kan du forvente at opnå en række fordele,
-              herunder tidsbesparelser, bedre smag og konsistens i dine retter,
-              mindre madspild og meget mere. Maskinen er designet til at hjælpe
-              dig med at lave mad på en nem og effektiv måde.
+              Med en Thermomix i dit køkken, får du en makker, der hjælper dig
+              gennem alle faser i tilberedningen af dine retter. Thermomix og
+              det tilhørende opskriftunivers fra Cookidoo, giver dig 90.000
+              opskrifter at vælge i mellem. Det vil spare tid, give bedre smag
+              og konsistens, mindre madspild og mere passion for madlavning.
+              Thermomix er designet til at hjælpe dig på dine præmisser og
+              hjælper dig med madlavningen på en nem, overskuelig og effektiv
+              måde.
             </p>
           </div>
         </div>

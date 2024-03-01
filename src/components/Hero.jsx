@@ -14,10 +14,21 @@ function Hero() {
                 <span className="underline decoration-primary">masterchef</span>
               </h1>
               <p className="mb-6 font-light   ">
-                Vær en mester i køkkenet med en køkkenmaskine der sætter
-                kvaliteten i fokus. Med{" "}
-                <strong className="font-extrabold">Thermomix</strong> TM6 kan du
-                lave alt fra de mest avancerede retter til de mest simple.{" "}
+                Vil du være Masterchef i dit eget køkken? Har du en passion for
+                mad og madlavning? Så er en Thermomix noget for dig. Måske har
+                du set den i madprogrammer i TV. Hvorfor skal du ikke være lige
+                så dygtig som dem? Det kan du med din egen Thermomix. <br></br>
+                <br></br>
+                Saml din familie og venner, så kan jeg vise, hvor nemt det er at
+                lave god og sund mad, enten hjemme hos dig, via en
+                onlinedemonstration eller hos importøren Sylvest & Co´s
+                madværksted i Hillerød. <br></br>
+                <br></br>Thermomix er fast inventar i langt de fleste
+                restaurantkøkkener, hvor den bruges professionelt. Med andre ord
+                har du mulighed for at lave mad, som er i restaurantkvalitet.
+                <br></br>
+                <br></br>
+                Kontakt os for et godt tilbud på Thermomix
               </p>
               <a
                 href="#kontakt"
@@ -36,11 +47,6 @@ function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
-              <a href="#løsning">
-                <button className="btn btn-outline text-black">
-                  Hvad kan den gøre for dig?
-                </button>
               </a>
             </div>
             <img

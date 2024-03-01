@@ -6,7 +6,35 @@ function Contact() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [address, setAddress] = useState("");
+  const [subscribeNewsletter, setSubscribeNewsletter] = useState(false);
   const modalRef = useRef();
+
+  const options = [
+    { label: "Jeg vil gerne kontaktes", value: "Jeg vil gerne kontaktes" },
+    {
+      label: "Jeg vil gerne have en demonstration af Thermomix",
+      value: "Jeg vil gerne have en demonstration af Thermomix",
+    },
+    {
+      label: "Jeg vil gerne høre mere om at blive Thermomixkonsulent",
+      value: "Jeg vil gerne høre mere om at blive Thermomixkonsulent",
+    },
+  ];
+
+  const handleSelectChange = (e) => {
+    const { value } = e.target;
+    setSelectedOptions((prevOptions) => {
+      if (prevOptions.includes(value)) {
+        // If the option is already selected, remove it
+        return prevOptions.filter((option) => option !== value);
+      } else {
+        // If the option is not selected, add it
+        return [...prevOptions, value];
+      }
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +47,16 @@ function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, company, phone, email, message }),
+          body: JSON.stringify({
+            name,
+            company,
+            phone,
+            email,
+            message,
+            selectedOptions,
+            address,
+            subscribeNewsletter,
+          }),
         }
       );
 
@@ -33,6 +70,9 @@ function Contact() {
         setPhone("");
         setEmail("");
         setMessage("");
+        setSelectedOptions([]);
+        setAddress("");
+        setSubscribeNewsletter(false);
       } else {
         console.log("Message sending failed.");
       }
@@ -75,6 +115,51 @@ function Contact() {
                     </a>
                   </span>
                 </p>
+                <p className="flex items-start text-2xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-9 h-9 text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    />
+                  </svg>
+
+                  <span className="mx-2 text-white truncate w-72">
+                    +45 52 23 00 22
+                  </span>
+                </p>
+                <p className="flex items-start text-2xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-9 h-9 text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+
+                  <span className="mx-2 text-white truncate w-72">
+                    Parkvej 1F, 7 4000 Roskilde
+                  </span>
+                </p>
               </div>
             </div>
             <div className="mt-8 lg:w-1/2 lg:mx-6">
@@ -93,7 +178,7 @@ function Contact() {
                         pattern="^[A-Za-zÅå\s]+"
                         title="Kun bogstaver fra A til Å er tilladt"
                         onChange={(e) => setName(e.target.value)}
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                        className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring"
                       />
                     </div>
                     <div>
@@ -104,7 +189,7 @@ function Contact() {
                         type="datetime-local"
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
-                        className="block w-full px-12 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                        className="block w-full px-12 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring"
                       />
                     </div>
                   </div>
@@ -120,7 +205,7 @@ function Contact() {
                       pattern="[0-9+]+"
                       title="Kun numre og plus tegn (+) er tilladt"
                       onChange={(e) => setPhone(e.target.value)}
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring"
                     />
                   </div>
                   <div className="flex-1 mt-6">
@@ -134,7 +219,16 @@ function Contact() {
                       pattern="^[^<>]*$"
                       title="intast en gyldig email adresse"
                       onChange={(e) => setEmail(e.target.value)}
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring"
+                    />
+                  </div>
+                  <div className="flex-1 mt-6">
+                    <label className="block mb-2 text-gray-600">Adresse</label>
+                    <input
+                      type="text"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring"
                     />
                   </div>
                   <div className="flex-1 mt-6">
@@ -146,8 +240,62 @@ function Contact() {
                       value={message}
                       pattern="^[^<>]*$"
                       onChange={(e) => setMessage(e.target.value)}
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring"
                     />
+                  </div>
+                  <div className="flex-1 mt-6">
+                    <label className="block mb-2 text-gray-600">
+                      Vælg venligst hvad din henvendelse drejer sig om (*)
+                    </label>
+                    <select
+                      multiple
+                      value={selectedOptions}
+                      onChange={handleSelectChange}
+                      className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 dark:focus:border-primary focus:outline-none focus:ring"
+                    >
+                      {options.map((option) => (
+                        <option
+                          required
+                          key={option.value}
+                          value={option.value}
+                          className={`flex items-center py-1 rounded-xl p-2 my-2 ${
+                            selectedOptions.includes(option.value)
+                              ? "!bg-primary text-white"
+                              : "hover:bg-green-100"
+                          }`}
+                        >
+                          <span className="mr-2">{option.label}</span>
+                          {selectedOptions.includes(option.value) && (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-4 w-4 text-white"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M17.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          )}
+                        </option>
+                      ))}
+                    </select>
+                    ;
+                  </div>
+                  <div className="flex-1 mt-6">
+                    <label className="mb-2 text-gray-600">
+                      Tilmeld dig nyhedsbrevet{" "}
+                      <input
+                        type="checkbox"
+                        checked={subscribeNewsletter}
+                        onChange={(e) =>
+                          setSubscribeNewsletter(e.target.checked)
+                        }
+                        className="checkbox checkbox-primary align-middle ml-2"
+                      />
+                    </label>
                   </div>
                   <button
                     type="submit"
@@ -156,11 +304,11 @@ function Contact() {
                     Bliv Kontaktet
                   </button>
                   <dialog ref={modalRef} id="my_modal_3" className="modal">
-                    <form method="dialog" className="modal-box">
-                      <button className="btn btn-sm btn-ghost absolute right-2 top-2">
+                    <form method="dialog" className="modal-box bg-white">
+                      <button className="btn btn-sm btn-ghost absolute right-2 top-2 text-primary">
                         ✕
                       </button>
-                      <h3 className="font-bold ">Sådan!</h3>
+                      <h3 className="font-bold text-primary">Sådan!</h3>
                       <p className="py-4">
                         Tak for din mail. Vi vender tilbage hurtigst muligt.
                       </p>

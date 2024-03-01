@@ -1,96 +1,34 @@
-import ThermomixProdukt from "../assets/images/thermomix_img/thermomix_produkt.jpg";
 function Contactjumbotron() {
   return (
-    <section className="  ">
-      <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto animate-fade-right">
-        <div className="sm:w-1/2 p-8 md:p-10">
-          <div className="image object-center text-center">
-            <img src={ThermomixProdukt} className="rounded-xl" />
-          </div>
-        </div>
-        <div className="sm:w-1/2 p-5 flex flex-col items-start">
-          <div className="text">
-            <h2 className="my-2 md:my-4 font-bold ">
-              Mere finesse til din
-              <span className="text-primary"> madlavning.</span>
-            </h2>
-            <p className="">
-              Vi har en passion for madlavning og hvordan hverdagen kan gøres
-              nemmere med en Thermomix i køkkenet. Dette ønsker vi at dele med
-              dig, så du kan få glæde af alle de fordele, som en maskine som
-              denne kan tilbyde.
-            </p>
-          </div>
-          <div className="mt-0 lg:mt-6  flex flex-col">
-            <a
-              href="#kontakt"
-              className="btn bg-primary border-none my-8 inline-flex items-center justify-center px-5 py-3 mr-3 font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 "
-            >
-              Kontakt os og få et tilbud
-              <svg
-                className="w-5 h-5 ml-2 -mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
+    <section className="">
+      <div className="flex flex-col items-center justify-center max-w-screen-xl mx-auto font-2xl animate-fade-right">
+        <p>
+          Jeg er nok meget traditionel omkring mine arbejdsmetoder i køkkenet,
+          men har indset, at Thermomix kan hjælpe mig på så mange måder uden at
+          gå på kompromis med den gode smag og kontrol i alle processerne. Jeg
+          nyder at kunne sætte maskinen til at lave noget af det, som jeg
+          normalt skal overvåge. Det kan for eksempel være temperaturstyring af
+          en bearnaisesovs, æltning af dej eller opgaver, hvor jeg tidligere har
+          skulle være med til mindste detalje for at lykkes. Når jeg siger, at
+          jeg ikke vil gå på kompromis med kvaliteten, sørger Thermomix for at
+          jeg kan lave noget andet i køkkenet, såsom at få ryddet af eller
+          forberede noget andet, der kræver min fulde opmærksomhed.<br></br>
+          <br></br>
+          Thermomixeren er min faste makker i køkkenet. Den klarer alt det
+          kedelige og hårde fuldstændig præcist og uden fejl. Resultatet bliver
+          perfekt HVER GANG! Jeg er masterchef i mit køkken. Det kan du også
+          blive. Book et møde med mig eller mit team, enten hjemme hos dig eller
+          i madværkstedet i Hillerød. Så bliver du også masterchef, uanset om du
+          er glad amatør eller mere erfaren. <br></br> <br></br>Thermomix tager
+          hensyn til alle typer ønsker til mad. Du kan for eksempel vælge
+          glutenfri opskrifter, fravalg af bestemte typer af madvarer i forhold
+          til eventuelle allergier og meget mere. <br></br> <br></br>Ved at
+          bruge mig/os som din personlige Thermomix konsulent, opnår du mange
+          fordele. Som autoriserede konsulenter, kan vi altid give dig de bedste
+          tilbud og personlig vejledning. Når du køber din Thermomix, følger vi
+          dig hele vejen helt gratis – både nu og i fremtiden.
+        </p>
       </div>
-      {/* 
-      <div className="px-4 py-4 mx-auto sm:px-6 md:px-12 lg:px-16 lg:py-22 container ">
-        <div className="flex flex-wrap items-center mx-auto">
-          <div className="">
-            <div>
-              <div className="">
-                <div className="">
-                  <img className="mx-auto " alt="hero" src={Team} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <h1 className="mb-8 text-4xl font-bold leading-none tracking-tighter  md:text-7xl lg:text-5xl">
-              Vi hjælper med at bygge dit kundenetværk.
-            </h1>
-            <p className="mb-8 text-base leading-relaxed text-left ">
-              Du kan kontakte os ved at udfylde kontaktformularen på vores
-              hjemmeside eller sende os en e-mail på&nbsp;
-              <a className="underline" href="mailto:kontakt@cleverreply.dk">
-                kontakt@CleverReply.dk
-              </a>
-              . Vores team er klar til at besvare dine spørgsmål og hjælpe dig
-              med at komme i gang.
-            </p>
-            <div className="mt-0 lg:mt-6  flex flex-col">
-              <a
-                href="#kontakt"
-                className="btn bg-primary border-none my-8 inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
-              >
-                Kontakt os og få et tilbud
-                <svg
-                  className="w-5 h-5 ml-2 -mr-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 }
