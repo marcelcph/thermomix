@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BlogUrl from "../utils/BlogUrl.jsx";
+import BlogSingleUrl from "../utils/BlogSingleUrl.jsx";
 import Loading from "../Loading/Loading";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -14,7 +14,7 @@ function SingleBlog() {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `${BlogUrl.WORDPRESS_BLOG_URL}/${blogId}`
+          `${BlogSingleUrl.WORDPRESS_BLOG_URL}/${blogId}`
         );
         setBlog(response.data);
 

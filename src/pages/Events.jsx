@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import EventUrl from "../utils/EventUrl";
 import axios from "axios";
 import Loading from "../Loading/Loading";
 
@@ -9,9 +10,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get(
-          "https://server.thermomixfan.dk/wp-json/wp/v2/posts?categories=3"
-        );
+        const response = await axios.get(EventUrl.WORDPRESS_BLOG_URL);
         setEvents(response.data);
         setLoading(false);
       } catch (error) {
