@@ -310,7 +310,8 @@ function Contact() {
                       </button>
                       <h3 className="font-bold text-primary">Sådan!</h3>
                       <p className="py-4">
-                        Tak for din mail. Vi vender tilbage hurtigst muligt.
+                        Tak for din mail. Vi vender tilbage til dig indenfor 24
+                        timer.
                       </p>
                     </form>
                   </dialog>
