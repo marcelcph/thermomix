@@ -42,33 +42,24 @@ const Events = () => {
         {loading ? (
           <Loading />
         ) : (
-          <table className="table w-full border-collapse border border-white animate-fade">
+          <table className="w-full bg-white border-collapse border  animate-fade rounded-xl overflow-hidden shadow-md">
             <thead>
               <tr className="bg-primary text-2xl">
-                <th className="border border-white-100 px-4 py-2 text-white">
-                  Dato
-                </th>
-                <th className="border border-white-100 px-4 py-2 text-white">
-                  Eventsted
-                </th>
-                <th className="border border-white-100-100 px-4 py-2 text-white">
-                  Beskrivelse
-                </th>
+                <th className="border  px-4 py-2 text-white">Dato</th>
+                <th className="border  px-4 py-2 text-white">Eventsted</th>
+                <th className="border  px-4 py-2 text-white">Beskrivelse</th>
               </tr>
             </thead>
             <tbody>
               {events.map((event) => (
-                <tr
-                  key={event.id}
-                  className="border-b border-white-100 text-lg"
-                >
-                  <td className="border border-white-100 px-4 py-2 text-black">
+                <tr key={event.id} className="border   text-lg">
+                  <td className="border  px-4 py-2 text-black">
                     {formatDate(event.acf.eventdato)}
                   </td>
-                  <td className="border border-white-100 px-4 py-2 text-black">
+                  <td className="border  px-4 py-2 text-black">
                     {event.acf.eventsted}
                   </td>
-                  <td className="border border-white-100-200 px-4 py-2 text-black">
+                  <td className="border  px-4 py-2 text-black">
                     {event.acf.eventbeskrivelse}
                   </td>
                 </tr>
@@ -80,5 +71,4 @@ const Events = () => {
     </div>
   );
 };
-
 export default Events;
