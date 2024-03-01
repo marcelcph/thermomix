@@ -71,7 +71,7 @@ function WordPressPosts() {
                   </h2>
                   <p className="text-gray-100">{post.formattedDate}</p>
                   <Link
-                    to={`/blog/${post.id}`}
+                    to={`/blog/${post.slug}`} // Brug postens slug i URL'en
                     className="btn btn-block  text-center mt-4 py-2 px-4 bg-green-700 font-bold text-white rounded-xl border-0 transition duration-300 hover:bg-green-400"
                   >
                     Læs mere

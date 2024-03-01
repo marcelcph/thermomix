@@ -5,41 +5,41 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function SingleBlog() {
-  const { blogId } = useParams();
+  const { slug } = useParams(); // Brug slug i stedet for blogId
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [mediaLoading, setMediaLoading] = useState(true); // Add media loading state
+  const [mediaLoading, setMediaLoading] = useState(true); // Tilføj media loading state
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `${BlogSingleUrl.WORDPRESS_BLOG_URL}/${blogId}`
+          `${BlogSingleUrl.WORDPRESS_BLOG_URL}?slug=${slug}` // Brug slug i API-kaldet
         );
-        setBlog(response.data);
+        setBlog(response.data[0]);
 
         // Fetch featured media details if it exists
-        if (response.data.featured_media) {
+        if (response.data[0].featured_media) {
           const mediaResponse = await axios.get(
-            response.data._links["wp:featuredmedia"][0].href
+            response.data[0]._links["wp:featuredmedia"][0].href
           );
           setBlog((prevBlog) => ({
             ...prevBlog,
             featured_media_url: mediaResponse.data.source_url,
           }));
         }
-        setMediaLoading(false); // Set media loading to false after featured media is fetched
+        setMediaLoading(false); // Sæt media loading til false efter featured media er hentet
       } catch (error) {
-        console.error("error fetching blog details", error);
+        console.error("Fejl ved hentning af blogoplysninger", error);
       } finally {
-        setLoading(false); // Set loading to false after all data is fetched
+        setLoading(false); // Sæt loading til false efter al data er hentet
       }
     };
     fetchBlog();
-  }, [blogId]);
+  }, [slug]);
 
   if (loading || mediaLoading) {
-    return <Loading />; // Render loading component while data is being fetched
+    return <Loading />; // Vis loading komponenten mens data hentes
   }
 
   return (
@@ -47,7 +47,7 @@ function SingleBlog() {
       <div className="p-5 sm:p-32 md:pt-32 !bg-white ">
         <div className=" animate-fade">
           <img
-            src={blog.featured_media_url || "placeholder.jpg"} // Use featured_media_url here
+            src={blog.featured_media_url || "placeholder.jpg"} // Brug featured_media_url her
             alt={blog.title.rendered}
             className="mx-auto max-w-3xl rounded-lg shadow-lg"
           />
