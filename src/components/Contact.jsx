@@ -9,6 +9,7 @@ function Contact() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [address, setAddress] = useState("");
   const [subscribeNewsletter, setSubscribeNewsletter] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Tilføjet isLoading-tilstand
   const modalRef = useRef();
 
   const options = [
@@ -38,7 +39,8 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send form data to the backend
+    setIsLoading(true); // Indikér at formularen bliver sendt
+
     try {
       const response = await fetch(
         "https://clever-replymailserver.vercel.app/send-email-thermomix",
@@ -78,6 +80,8 @@ function Contact() {
       }
     } catch (error) {
       console.error("Error sending message:", error);
+    } finally {
+      setIsLoading(false); // Når handlingen er færdig, stop loading-indikatoren
     }
   };
 
@@ -87,11 +91,9 @@ function Contact() {
         <div className="container flex flex-col  px-6 py-12 mx-auto ">
           <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
             <div className="text-white lg:w-1/2 lg:mx-6 ">
-              <h1 className=" font-bold text-white">Book en demonstration</h1>
+              <h1 className=" font-bold text-white">Bliv kontaktet</h1>
               <p className="max-w-2xl mt-5 text-white">
-                Vi vil gerne vise dig, hvordan en Thermomix kan hjælpe dig med
-                at gøre madlavning til en leg. Udfyld formularen, og vi vil
-                kontakte dig for at aftale en demonstration af maskinen.
+                Udfyld formularen og vi vil kontakte dig indenfor 24 timer.
               </p>
               <div className="mt-6 space-y-8 md:mt-8">
                 <p className="flex items-start -mx-2 pt-40 text-2xl">
@@ -299,9 +301,10 @@ function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 mt-6  font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-green-400 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                    className="w-full px-6 py-3 mt-6 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-green-400 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                    disabled={isLoading} // Deaktiver knappen når der loades
                   >
-                    Bliv Kontaktet
+                    {isLoading ? "Sender..." : "Bliv Kontaktet"}
                   </button>
                   <dialog ref={modalRef} id="my_modal_3" className="modal">
                     <form method="dialog" className="modal-box bg-white">

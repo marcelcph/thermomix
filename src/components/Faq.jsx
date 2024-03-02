@@ -7,7 +7,7 @@ function FAQ() {
         <div className="collapse collapse-arrow bg-primary ">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title  font-medium text-white">
-            Hvordan fungerer en demonstration af Thermomix (Ikke maskinen)
+            Hvordan fungerer en demonstration af Thermomix
           </div>
           <div className="collapse-content ">
             <p className="text-black">
@@ -21,20 +21,6 @@ function FAQ() {
               du samler flere personer til demonstrationen, sørger vi for at
               tilpasse antallet af konsulenter, så alle kan få en god
               vejledning.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow bg-primary my-3">
-          <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title  font-medium text-white">
-            Hvordan fungerer en demonstration af maskinen?
-          </div>
-          <div className="collapse-content ">
-            <p className="text-black">
-              Vi er på forskellige messer og events, hvor vi demonstrerer vores
-              maskine. Du kan også booke en demonstration hos dig selv, hvor vi
-              kommer ud og viser dig, hvordan maskinen fungerer, og hvad den kan
-              gøre for dig.
             </p>
           </div>
         </div>

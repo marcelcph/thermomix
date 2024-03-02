@@ -1,4 +1,5 @@
-import HeroImg from "../assets/images/thermomix_img/thermomix_banner.webp";
+import HeroImg from "../assets/images/thermomix_forside_hero_cropped.jpg";
+
 import { ScrollNav } from "./InView";
 
 import { InView } from "react-intersection-observer";
